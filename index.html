@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="main">
+    <h1 id="h1"> Random Background Color Genarator </h1>
+        <button id="btn">Click here to get random background colors</button>
+        <a href="./index"><button style="background-color: rgb(220, 151, 220);margin:10px;" >Reset</button>
+    </div>
+<script>
+    let getmain=document.getElementById("main");
+    getmain.setAttribute("style","width:100vw");
+    let geth1=document.getElementById("h1");
+    geth1.setAttribute("style","margin:100px;margin-left:500px");
+    let getbt1=document.getElementById("btn");
+    getbt1.setAttribute("style","margin-left:600px;background-color: rgb(156, 239, 211);");
+    getbt1.addEventListener("click",()=>{
+        let letters = "0123456789ABCDEF";
+        let  color = "#";
+        for(i=0;i<6;i++){
+            color+=letters[Math.floor(Math.random()*16)];
+        }
+        document.body.style.backgroundColor=color;
+    });
+</script>
+</body>
+</html>
